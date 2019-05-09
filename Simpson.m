@@ -1,0 +1,41 @@
+function[I]=Simpson(x,y)
+% Simpson's 1/3 Rule
+% MECH 105
+% Yeilin Benitez
+% This algorithm numerically evaluates the integral of vector values 'y'
+% with respect to 'x'.
+% Inputs:
+% y- function values at x
+% x- vector 
+% SIDENOTE~ x and y must be same length
+% Outputs:
+% I- the estimation of the integral with the given data
+if length(x)~= length(y)
+    error('X and Y must be equal in length')
+end
+intervals=length(x)-1; %Determines the number of intervals
+changex=linspace(x(1),x(length(x)),length(x));
+    if changex~=x
+        error('Spacing between x intervals must be consistent.')
+    end
+    dx=diff(x);
+% Warn user that trapezoidal rule is used
+if rem(intervals,2)~=0
+    warning('There is an odd number of intervals, therefore Trapezoidal Rule must be used')
+% Simpson's 1/3 Rule
+h=(x(length(x)-1)-x(1))/(intervals-1);
+even=2*(sum(y(3:2:length(y)-2)));% Sums the even intervals
+odd=4*(sum(y(2:2:length(y)-2)));% Sums the odd intervals
+firstin=y(1);%First interval @ f(x)
+lastin=y(length(y)-1);%Last value @ f(x)
+% Trapeziodal Rule 
+traprule=dx(1)*(y(length(y)-1)+y(length(y)))/2;
+I=traprule+(h/3)*(firstin+odd+even+lastin)
+else
+    h=(x(length(x))-x(1))/intervals;
+    even=2*(sum(y(3:2:length(y)-1)));% Sums the even intervals
+    odd=4*(sum(y(2:2:length(y))));% Sums the odd intervals
+    firstin=y(1);%First interval @ f(x)
+    lastin=y(length(y));%Last value @ f(x)
+    I=(h/3)*(firstin+odd+even+lastin)
+end
