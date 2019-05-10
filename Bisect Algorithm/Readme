@@ -1,2 +1,6 @@
 This algorithm uses the bisection method to find the roots of a function.
-INPUTS:
+INPUTS: -name of function -lower and upper guesses -desired relative error (default = 0.0001%)
+-maximum allowable iterations (default = 50) -additional parameters used by func
+OUTPUTS: -real root -function value at root -approximate relative error (%) 
+-number of iterations
+The bisection method is a braketing method that looks for sign changes in continuous functions.
