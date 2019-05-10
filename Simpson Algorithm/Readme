@@ -1,1 +1,1 @@
-README.m
+Simpson 1/3 rule is used to find the integral numerically. In certain situations the trapezoidal rule may also be implemented in this algorithm.
