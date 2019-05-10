@@ -1,1 +1,3 @@
 This algorithm find the roots of a quadratic function, wether there are two or one real roots.
+User inputs the coefficients to the equation ax^2+bx+c=0 and the program calculates the real roots. 
+Limitations are that this algorithm does not include imaginary numbers as well as it only works for quadratic functions.
