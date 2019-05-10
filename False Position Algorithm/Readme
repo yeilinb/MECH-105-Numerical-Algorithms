@@ -1,1 +1,6 @@
 The purpose of this algorithm is to find the roots of complicated functions.
+INPUTS: - The function being evaluated
+- A lower and upper guess of the root, the desired relative error and iterations
+OUTPUTS: - The estimate of the roots location
+-The aproximate relative error and the amount of iterations
+Limitations to this algorithm is the way the function is inputed as well as errors when calling on the function.
