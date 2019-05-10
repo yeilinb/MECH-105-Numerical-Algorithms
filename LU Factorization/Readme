@@ -1,1 +1,4 @@
-README.md
+This algorithm uses partial pivoting and LU Decomposition to determine the L,U, and P matrices.
+INPUTS: the coefficients of the functions, a matrix
+OUTPUTS: the lower triangular matrix and the upper triangular matrix, the pivot matrix is also available.
+At times the algorithm may not return the correct L or U matrices.
