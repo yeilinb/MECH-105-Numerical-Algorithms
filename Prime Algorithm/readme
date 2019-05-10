@@ -1,1 +1,4 @@
 This algorithm finds the prime numbers within a vetor m:n.
+Inputs: 'm'-an integer and 'n'-an integer
+Outputs: a vector that displays all the prime numbers within m:n
+The algorithm works by finding the prime number within a vector in MATLAB.
