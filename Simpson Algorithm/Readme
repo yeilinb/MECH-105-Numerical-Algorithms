@@ -1,1 +1,4 @@
-Simpson 1/3 rule is used to find the integral numerically. In certain situations the trapezoidal rule may also be implemented in this algorithm.
+Simpson 1/3 rule is used to find the integral numerically using data. In certain situations the trapezoidal rule may also be implemented in this algorithm.
+Inputs:-function values at x and an x-vector SIDENOTE~ x and y must be same length
+Outputs: an estimation of the integral with the given data
+Some limitations is that if the data has extremely small numbers, subtraction cancellation errors can occur.
